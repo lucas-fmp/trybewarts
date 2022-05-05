@@ -26,3 +26,7 @@ aside #trybewarts-forms-logo {
 main form #email-casa {
   display: flex;
 }
+
+main form #rate-container {
+  display: flex;
+}
