@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 // Capturando elementos importantes
 const loginButton = document.getElementById('inputButton');
 const email = document.getElementById('inputEmail');
@@ -33,41 +32,80 @@ const printSubject = document.createElement('p');
 const printRate = document.createElement('p');
 const printObs = document.createElement('p');
 
-sendButton.addEventListener('click', () => {
+function geraNome() {
   const firstName = document.querySelector('#input-name').value;
   const lastName = document.querySelector('#input-lastname').value;
+  printFullName.innerText = `Nome: ${firstName} ${lastName}`;
+}
+
+function geraEmail() {
   const emailText = document.querySelector('#input-email').value;
+  printEmail.innerText = `Email: ${emailText}`;
+}
+
+function geraCasa() {
   const house = document.querySelector('#house').value;
+  printHouse.innerText = `Casa: ${house}`;
+}
+
+function geraFamilia() {
   const family = document.querySelector('input[name="family"]:checked').value;
-  const subject = document.querySelectorAll('input[name=subject]:checked').value;
-/*   let rate = document.querySelector('#rate').value;
-  let obs = document.querySelector('#textarea').value; */
+  printFamily.innerText = `Família: ${family}`;
+}
 
-  printFullName.innerText = `${firstName} ${lastName}`;
-  printEmail.innerText = emailText;
-  printHouse.innerText = house;
-  printFamily.innerText = family;
-/*   printSubject.innerText = subject; */
-/*   printRate.innerText = rate;
-  printObs.innerText = obs; */
-
-  while (form.hasChildNodes()) {
-    form.removeChild(form.firstChild);
+function geraMateria() {
+  const subject = document.querySelectorAll('input[name=subject]:checked');
+  const values = [];
+  printSubject.innerText = 'Matérias: ';
+  for (let i = 0; i < subject.length; i += 1) {
+    values.push(subject[i].value);
+    printSubject.innerText += values[i];
+    if (i !== subject.length - 1) {
+      printSubject.innerText += ', ';
+    }
   }
+}
+
+function geraAvaliacao() {
+  const rate = document.querySelector('input[name="rate"]:checked').value;
+  printRate.innerText = `Avaliação: ${rate}`;
+}
+
+function geraObs() {
+  const obs = document.querySelector('#textarea').value;
+  printObs.innerText = `Observações: ${obs}`;
+}
+
+function appendChilds() {
   form.appendChild(printFullName);
   form.appendChild(printEmail);
   form.appendChild(printHouse);
   form.appendChild(printFamily);
-/*   form.appendChild(printSubject); */
-/*   form.appendChild(printRate);
-  form.appendChild(printObs); */
-});
+  form.appendChild(printSubject);
+  form.appendChild(printRate);
+  form.appendChild(printObs);
+}
+
+function geraResultado() {
+  geraNome();
+  geraEmail();
+  geraCasa();
+  geraFamilia();
+  geraMateria();
+  geraAvaliacao();
+  geraObs();
+  while (form.hasChildNodes()) {
+    form.removeChild(form.firstChild);
+  }
+  appendChilds();
+}
+
+sendButton.addEventListener('click', geraResultado);
 
 function contaCaracteres() {
   const textArea = document.querySelector('.textarea');
   const span = document.querySelector('#counter');
   textArea.addEventListener('keyup', (event) => {
-    console.log(event.target.value.length);
     const caracteresDigitados = event.target.value.length;
     let caracteresRestantes = 500;
     caracteresRestantes -= caracteresDigitados;
