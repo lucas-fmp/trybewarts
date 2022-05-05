@@ -23,6 +23,10 @@ aside #trybewarts-forms-logo {
   height: 500px;
 }
 
+<<<<<<< HEAD
 main form #nome-completo {
+=======
+main form #email-casa {
+>>>>>>> 6dc29bc7fcb011f38336bbb5cda822baa4638f83
   display: flex;
 }
