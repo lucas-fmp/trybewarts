@@ -30,3 +30,7 @@ main form #nome-completo {
 main form #email-casa {
   display: flex;
 }
+
+main form #counter-label #counter {
+  width: 30px;
+}

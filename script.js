@@ -11,3 +11,17 @@ button.addEventListener('click', () => {
     alert('Email ou senha inválidos.');
   }
 });
+
+function contaCaracteres() {
+  const textArea = document.querySelector('.textarea');
+  const span = document.querySelector('#counter');
+  textArea.addEventListener('keyup', (event) => {
+    console.log(event.target.value.length);
+    const caracteresDigitados = event.target.value.length;
+    let caracteresRestantes = 500;
+    caracteresRestantes -= caracteresDigitados;
+    span.innerText = caracteresRestantes;
+  });
+}
+
+contaCaracteres();
