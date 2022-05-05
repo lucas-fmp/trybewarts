@@ -11,7 +11,7 @@
 
 ---
 
-**Nota**: /ESCREVAM SUA NOTA AQUI/
+**Nota**: 8
 
 ---
 
@@ -19,11 +19,11 @@
 
 ---
 
-**Observações**: /ESCREVAM SUAS OBSERVAÇÕES AQUI/
+**Observações**: O projeto poderia ter algumas funcionalidades mais complicadas de serem resolvidas e a implementação do css para dispositivos mobile poderia ser um requisito avaliativo para reforçar os conhecimentos passados no dia 6.5
 
 ---
 
-**Pessoas integrantes da dupla**: /ESCREVAM SEUS NOMES AQUI/
+**Pessoas integrantes da dupla**: Marcos Barbosa Schettino e Lucas Fernando Macedo Pereira
 
 ---
 
