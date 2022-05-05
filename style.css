@@ -23,14 +23,14 @@ aside #trybewarts-forms-logo {
   height: 500px;
 }
 
-main form #email-casa {
-  display: flex;
-}
-
 main form #nome-completo {
   display: flex;
 }
 
-main form #rate-container {
+main form #email-casa {
   display: flex;
+}
+
+main form #counter-label #counter {
+  width: 30px;
 }
