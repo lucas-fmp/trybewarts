@@ -21,17 +21,24 @@
     <form action="get" id="evaluation-form">
       <input id="input-name" type="text" placeholder="Nome">
       <input id="input-lastname"  type="text" placeholder="Sobrenome">
-      <input id="input-email"  type="email" placeholder="Email">
-      <select name="" id="house">
-        <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-        <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-        <option value="Corvinode" id="corvinode-house">Corvinode</option>
-        <option value="Pytherina" id="pytherina-house">Pytherina</option>
-      </select>
+      <div id="email-casa">
+        <input id="input-email"  type="email" placeholder="Email">
+        <select name="" id="house">
+          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+          <option value="Corvinode" id="corvinode-house">Corvinode</option>
+          <option value="Pytherina" id="pytherina-house">Pytherina</option>
+        </select>
+      </div>
+      <label for="family" id="label-family">Qual sua família?</label>
+      <label><input type="radio" name="family" id="" value="Frontend">Frontend</label>
+      <label><input type="radio" name="family" id="" value="Backend">Backend</label>
+      <label><input type="radio" name="family" id="" value="FullStack">FullStack</label>
     </form>
     <aside>
       <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="">
     </aside>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
