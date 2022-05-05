@@ -19,8 +19,10 @@
   </header>
   <main>
     <form action="get" id="evaluation-form">
-      <input id="input-name" type="text" placeholder="Nome">
-      <input id="input-lastname"  type="text" placeholder="Sobrenome">
+      <div id="nome-completo">
+        <input id="input-name" type="text" placeholder="Nome">
+        <input id="input-lastname"  type="text" placeholder="Sobrenome">
+      </div>
       <div id="email-casa">
         <input id="input-email"  type="email" placeholder="Email">
         <select name="" id="house">
@@ -30,6 +32,13 @@
           <option value="Pytherina" id="pytherina-house">Pytherina</option>
         </select>
       </div>
+      <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+      <label for="HoFs"><input id="HoFs"  type="checkbox" value="HoFs">HoFs</label>
+      <label for="Jest"><input id="Jest"  type="checkbox" value="Jest">Jest</label>
+      <label for="Promises"><input id="Promises"  type="checkbox" value="Promises">Promises</label>
+      <label for="React"><input id="React"  type="checkbox" value="React">React</label>
+      <label for="SQL"><input id="SQL"  type="checkbox" value="SQL">SQL</label>
+      <label for="Python"><input id="Python"  type="checkbox" value="Python">Python</label>
       <label for="family" id="label-family">Qual sua família?</label>
       <label><input type="radio" name="family" id="" value="Frontend">Frontend</label>
       <label><input type="radio" name="family" id="" value="Backend">Backend</label>
@@ -48,6 +57,9 @@
         <label><input type="radio" name="rate" value="9" class="rate-trybewarts">9</label>
         <label><input type="radio" name="rate" value="10" class="rate-trybewarts">10</label>
       </div>
+      <label for="textarea" class="textarea">Deixe seu comentário:<textarea maxlength="500" name="comentario" id="textarea" cols="30" rows="10"></textarea></label>
+      <label for="agreement" id="label-infos"><input type="checkbox" name="" id="agreement">Você concorda com o uso das informações acima?</label>
+      <button type="submit">Enviar</button>
     </form>
     <aside>
       <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="">

@@ -27,6 +27,10 @@ main form #email-casa {
   display: flex;
 }
 
+main form #nome-completo {
+  display: flex;
+}
+
 main form #rate-container {
   display: flex;
 }
